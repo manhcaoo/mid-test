@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Enter a Number</label>
+    <input id="userInput" type="text" />
+    <button id="btn" onclick="clickButton()">Click me</button>
+    <p id="result"></p>
+    <script>
+      function clickButton() {
+        let userInput = +document.getElementById("userInput").value;
+
+        let numbers = new Array(20);
+        for (let i = 0; i < numbers.length; i++) {
+          numbers[i] = userInput;
+        }
+
+        if (numbers % 2 != 0) {
+          console.log(numbers);
+        }
+        // let btn = document.getElementById("btn");
+        // let result = document.getElementById("result");
+        // let cal = Math.floor(Math.random) * userInput;
+      }
+
+      // function isPrime(num) {
+      //   if (num === 2) {
+      //     return true;
+      //   } else if (num > 1) {
+      //     for (var i = 2; i < num; i++) {
+      //       if (num % i !== 0) {
+      //         return true;
+      //       } else if (num === i * i) {
+      //         return false;
+      //       } else {
+      //         return false;
+      //       }
+      //     }
+      //   } else {
+      //     return false;
+      //   }
+      // }
+
+      // console.log(isPrime(121));
+    </script>
+  </body>
+</html>

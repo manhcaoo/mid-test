@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = new Array(110);
+      for (let i = 0; i < array.length; i++) {
+        array[i] = Math.floor(Math.random() * 100);
+      }
+      function findNb() {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] % 3 || array[i] % 7) {
+            return (sum += array[i]);
+          } else {
+            return "error";
+          }
+        }
+      }
+      let result = findNb();
+      alert(result);
+    </script>
+  </body>
+</html>
